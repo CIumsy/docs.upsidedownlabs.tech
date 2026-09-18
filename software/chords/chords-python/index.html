@@ -1,0 +1,2045 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chords-Python &#8212; upsidedownlabs.github.io  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/chords/chords-python/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/software/chords/chords-python/index.html" />
+    <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Chords-LSL-Connector" href="../chords-lsl-connector/index.html" />
+    <link rel="prev" title="Chords-Web" href="../chords-web/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Welcome to Upside Down Labs docs site!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black_hr_nbg.svg" class="logo__image only-light" alt="upsidedownlabs.github.io  documentation - Home"/>
+    <img src="../../../_static/logo_white_hr_nbg.svg" class="logo__image only-dark pst-js-only" alt="upsidedownlabs.github.io  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Chords</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chords-web/index.html">Chords-Web</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chords-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-lsl-connector/index.html">Chords-LSL-Connector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-lsl-visualizer/index.html">Chords-LSL-Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-java/index.html">Chords-Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-csv-plotter/index.html">Chords CSV Plotter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tools/npg-lite-flasher/index.html">NPG Lite Flasher</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Software</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/muscle-bioamp-arduino-firmware/index.html">Muscle (EMG) BioAmp Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/eye-bioamp-arduino-firmware/index.html">Eye (EOG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/heart-bioamp-arduino-firmware/index.html">Heart (ECG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/brain-bioamp-arduino-firmware/index.html">Brain (EEG) BioAmp Arduino Firmware</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Software</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Chords-Python</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="chords-python">
+<span id="chords-pythons"></span><h1>Chords-Python<a class="headerlink" href="#chords-python" title="Link to this heading">#</a></h1>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/bj7exKRsuZ8" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Chords-Python is an open-source bag of tools for recording biopotential signals like <strong>ECG</strong>, <strong>EMG</strong>, <strong>EEG</strong>, or <strong>EOG</strong>, along with visualization using BioAmp hardware. It’s ideal for educational purposes as it promotes DIY Neuroscience and makes biopotential signal exploration more accessible for students and researchers.</p>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Connection</p></td>
+<td><p>Supports both wired and wireless connections via Wi-Fi, Bluetooth, or USB (Serial).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Reading</p></td>
+<td><p>Reads data packets from development board in real-time, efficiently processing them to prevent data loss and ensure accurate signal representation for analysis and visualization.</p></td>
+</tr>
+<tr class="row-even"><td><p>CSV Logging</p></td>
+<td><p>Optionally logs incoming data to a CSV file with columns for counter and channel data, enabling easy storage, analysis, and sharing.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LSL Streaming</p></td>
+<td><p>Streams data via Lab Streaming Layer (LSL), a protocol for time-synchronized data sharing. Enables real-time analysis, visualization, or integration with tools like BrainVision.</p></td>
+</tr>
+<tr class="row-even"><td><p>Applications</p></td>
+<td><p>Provides an interface to run multiple applications simultaneously via the LSL stream.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Create Custom Application</p></td>
+<td><p>Allows users to develop and integrate their own applications with the system.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="software-requirements">
+<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.arduino.cc/en/software">Arduino IDE</a> – Required to upload the Chords Arduino firmware to your development board.</p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python</a> – Ensure you have the most recent version installed.</p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/">VS Code</a> or any other code editor (Alternatively, you can use the Command Prompt).</p></li>
+</ul>
+</section>
+<section id="hardware-requirements">
+<h2>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
+<p>To use Chords-Python, you need:</p>
+<ul class="simple">
+<li><p>A development board (<a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware/blob/main/README.md">Compatible Boards</a>)</p></li>
+<li><p>A USB cable (type depends on the board)</p></li>
+<li><p><a class="reference external" href="https://docs.upsidedownlabs.tech/hardware/index.html">BioAmp Hardware</a> and its accessories</p></li>
+</ul>
+</section>
+<section id="setting-up-the-hardware">
+<h2>Setting up the hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h2>
+<p>Make all the connections according to the <a class="reference external" href="https://docs.upsidedownlabs.tech/hardware/index.html">hardware you are using</a> , including sensor connections with the development board, body connections with the sensor, and connections from the development board to your laptop.</p>
+</section>
+<section id="uploading-the-code">
+<h2>Uploading the code<a class="headerlink" href="#uploading-the-code" title="Link to this heading">#</a></h2>
+<p>Once you are all set, it is time to upload the code to your development board. Go to <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords Arduino Firmware</a> GitHub repo, scroll down to the supported boards table, find your board name, and click on the Arduino sketch corresponding to that row.
+Copy the sketch and paste it into Arduino IDE.
+Go to tools, select your board, and the correct COM port. Now, hit the upload button.</p>
+</section>
+<section id="opening-chords-python">
+<span id="using-chords-python"></span><h2>Opening Chords-Python<a class="headerlink" href="#opening-chords-python" title="Link to this heading">#</a></h2>
+<p>There are two ways to use Chords-Python:</p>
+<p><strong>A. Using the `chordspy` Python Package (Recommended)</strong></p>
+<p><strong>B. Running Scripts Manually from the Repository</strong></p>
+<section id="a-using-the-chordspy-package">
+<h3>A. Using the chordspy Package<a class="headerlink" href="#a-using-the-chordspy-package" title="Link to this heading">#</a></h3>
+<p>This is the smoothest way to get started. Follow the steps below:</p>
+<ol class="arabic">
+<li><p><strong>Install Python</strong>
+Make sure latest version of Python is installed.</p></li>
+<li><p><strong>Create and Activate a Virtual Environment</strong>:</p>
+<ul>
+<li><p><strong>On Windows</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>On macOS/Linux</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Install the Package</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install chordspy</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Launch the Web Interface</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">chordspy</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>A web interface will open where you can connect your device and access applications.</p>
+<figure class="align-center" id="id22">
+<img alt="Interface in Light Mode" src="../../../_images/light-interface.png" />
+<figcaption>
+<p><span class="caption-text">Interface in Light Mode</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id23">
+<img alt="Interface in Dark Mode" src="../../../_images/dark-interface.png" />
+<figcaption>
+<p><span class="caption-text">Interface in Dark Mode</span><a class="headerlink" href="#id23" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="b-running-scripts-manually-alternative">
+<h3>B. Running Scripts Manually (Alternative)<a class="headerlink" href="#b-running-scripts-manually-alternative" title="Link to this heading">#</a></h3>
+<p>If you prefer running scripts directly (for development, debugging, or customization):</p>
+<ol class="arabic">
+<li><p><strong>Download the Repository</strong>:</p>
+<ul class="simple">
+<li><p>You can download the Chords-Python repository from GitHub by visiting the following link: <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Python/">Chords-Python</a>.</p></li>
+<li><p>Or, you can clone the repository using Git by running the following command:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/upsidedownlabs/Chords-Python.git</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create and Activate a Virtual Environment</strong> (if not already):</p>
+<ul>
+<li><p><strong>On Windows</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>On macOS/Linux</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Install Requirements</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install -r requirements.txt</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the Application</strong>:</p>
+<p>Navigate to the <cite>chordspy</cite> folder and run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m chordspy.app                          # To launch the web interface</span>
+<span class="go">python -m chordspy.connection --protocol usb    # To start LSL stream via USB</span>
+<span class="go">python -m chordspy.connection --protocol ble    # To start LSL stream via BLE</span>
+<span class="go">python -m chordspy.connection --protocol wifi   # To start LSL stream via WiFi</span>
+</pre></div>
+</div>
+<p>To run any application, open a new terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python chordspy.gui.py         # GUI Application</span>
+<span class="go">python chordspy.ffteeg.py      # EEG with FFT Analysis</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="connection">
+<h2>Connection<a class="headerlink" href="#connection" title="Link to this heading">#</a></h2>
+<p>The first step is to establish a connection with your device and start the stream.</p>
+<p>There are three connection options available:</p>
+<ul class="simple">
+<li><p>Wi-Fi</p></li>
+<li><p>Bluetooth</p></li>
+<li><p>Serial (USB)</p></li>
+</ul>
+<section id="wi-fi">
+<h3>Wi-Fi<a class="headerlink" href="#wi-fi" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Upload the Wi-Fi firmware through the <code class="docutils literal notranslate"><span class="pre">Chords-Arduino-Firmware</span></code> repository</p></li>
+<li><p>Turn on the device and connect to the access point created by the device (e.g., <code class="docutils literal notranslate"><span class="pre">npg-lite-2</span></code>)</p></li>
+<li><p>In the web interface:</p>
+<ul class="simple">
+<li><p>Click the <strong>Wi-Fi</strong> button</p></li>
+<li><p>Click the <strong>Connect</strong> button</p></li>
+</ul>
+</li>
+</ol>
+<p>A pop-up notification will appear indicating a successful connection.</p>
+</section>
+<section id="bluetooth">
+<h3>Bluetooth<a class="headerlink" href="#bluetooth" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Upload the Bluetooth firmware through the <code class="docutils literal notranslate"><span class="pre">Chords-Arduino-Firmware</span></code> repository</p></li>
+<li><p>Turn on the device and enable Bluetooth on your computer</p></li>
+<li><p>In the web interface:</p>
+<ul class="simple">
+<li><p>Click the <strong>Bluetooth</strong> button</p></li>
+<li><p>Select your device from the list of available devices</p></li>
+<li><p>Hit the <strong>Connect</strong> button</p></li>
+</ul>
+</li>
+</ol>
+<p>A pop-up notification will appear indicating a successful connection.</p>
+</section>
+<section id="serial-usb">
+<h3>Serial (USB)<a class="headerlink" href="#serial-usb" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Upload the Serial firmware through the <code class="docutils literal notranslate"><span class="pre">Chords-Arduino-Firmware</span></code> repository</p></li>
+<li><p>Connect the device to your computer using a USB cable</p></li>
+<li><p>In the web interface:</p>
+<ul class="simple">
+<li><p>Click the <strong>Serial</strong> button</p></li>
+<li><p>Click the <strong>Connect</strong> button</p></li>
+</ul>
+</li>
+</ol>
+<p>A pop-up notification will appear indicating a successful connection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The connection step is essential as it initiates the LSL Stream, which is required for running applications.</p>
+</div>
+</section>
+</section>
+<section id="csv-logging">
+<h2>CSV Logging<a class="headerlink" href="#csv-logging" title="Link to this heading">#</a></h2>
+<p>The raw data received from the device can be logged to a CSV file for further analysis or record-keeping. This optional feature can be enabled or disabled in the web interface.</p>
+<p>To use CSV logging:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Start recording</strong> button to begin logging
+- A file with name is created <code class="docutils literal notranslate"><span class="pre">ChordsPy_{timestamp}.csv</span></code> in the same folder.
+- File includes columns for counter and channel data</p></li>
+<li><p>Click the <strong>Stop recording</strong> button to end logging
+- File will be saved in the same folder</p></li>
+</ol>
+<figure class="align-center" id="id24">
+<img alt="CSV Logging" src="../../../_images/csv.png" />
+<figcaption>
+<p><span class="caption-text">CSV Logging</span><a class="headerlink" href="#id24" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
+<p>There are many applications available that stream the LSL and can be run for various purposes.</p>
+<p>List of available applications:</p>
+<section id="ecg-with-heart-rate">
+<h3>1. <cite>ECG with Heart Rate</cite><a class="headerlink" href="#ecg-with-heart-rate" title="Link to this heading">#</a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/tZud2tc-TGI" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id2">
+<h4>Overview<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>The <strong>ECG with Heart Rate</strong> is a real-time application designed to visualize and analyze Electrocardiogram (ECG) data using the Lab Streaming Layer (LSL) protocol. Built with Python and PyQt5, this application provides a graphical interface for monitoring ECG signals, detecting R-peaks (heartbeats), and calculating the heart rate in real time. It applies signal processing techniques and utilizes the <cite>neurokit2</cite> library to estimate R-peak detection and heart rate.</p>
+</section>
+<section id="id3">
+<h4>Features<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Real-Time ECG Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Displays real-time ECG signals in a dynamic plot using <cite>pyqtgraph</cite>.</p></li>
+<li><p>Supports adjustable y-axis scaling based on the sampling rate (e.g. 250 Hz or 500 Hz).</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>R-Peak Detection</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Utilizes the <cite>neurokit2</cite> library to detect R-peaks in the ECG signal.</p></li>
+<li><p>Highlights detected R-peaks as red dots on the plot for easy visualization.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Heart Rate Calculation</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Computes heart rate (in BPM) using the time intervals between consecutive R-peaks.</p></li>
+<li><p>Implements a moving average filter to smooth heart rate values and reduce noise.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Interactive GUI</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Built with PyQt5, providing a user-friendly interface with a real-time ECG plot and heart rate display.</p></li>
+<li><p>Allows double-click to reset the plot’s zoom level to default settings.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>Signal Filtering</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Applies a low-pass Butterworth filter to remove high-frequency noise from the ECG signal.</p></li>
+<li><p>Helps in enhancing signal clarity, which can assist in identifying R-peaks.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A GUI window will appear, displaying the real-time ECG signal along with the calculated heart rate.</p>
+<figure class="align-center" id="id25">
+<img alt="Heart Rate with ECG" src="../../../_images/heartbeat_ecg.png" />
+<figcaption>
+<p><span class="caption-text">Heart Rate with ECG</span><a class="headerlink" href="#id25" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="emg-with-envelope">
+<h3>2. <cite>EMG with Envelope</cite><a class="headerlink" href="#emg-with-envelope" title="Link to this heading">#</a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/TiDwSQEY2eY" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id4">
+<h4>Overview<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p>The <strong>EMG with Envelope</strong> is a Python-based application designed to visualize and analyze Electromyography (EMG) signals in real-time. It connects to an EMG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to extract the EMG envelope, and displays both the filtered EMG signal and its envelope in a user-friendly graphical interface. Built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite>, the application provides a responsive and interactive visualization tool for students, researchers, or developers working with EMG data.</p>
+</section>
+<section id="id5">
+<h4>Features<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Real-Time EMG Signal Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Connects to an LSL stream to acquire real-time EMG data.</p></li>
+<li><p>Displays the EMG signal after applying a high-pass filter (70 Hz cutoff) to remove low-frequency noise.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>EMG Envelope Extraction</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Computes the Root Mean Square (RMS) envelope of the filtered EMG signal using a moving window.</p></li>
+<li><p>Applies convolution with a uniform window and pads the result to align with the original signal length.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Interactive and Responsive GUI</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Built using <cite>PyQt5</cite> for a modern and intuitive user interface.</p></li>
+<li><p>Features two synchronized plots: one for the filtered EMG signal and one for the EMG envelope.</p></li>
+<li><p>Disables zoom and pan for a clean, fixed-axis visualization.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Customizable Signal Processing</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Implements a high-pass Butterworth filter to remove baseline drift and noise.</p></li>
+<li><p>Adjusts the RMS window size dynamically based on the sampling rate (e.g., 25 samples for 250 Hz, 50 samples for 500 Hz).</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>Dynamic Plot Updates</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Updates the plots in real-time using a fixed-size circular buffer for efficient data handling.</p></li>
+<li><p>Refreshes the display every 15 milliseconds for smooth and responsive visualization.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A GUI window will appear, displaying the real-time EMG signal along with the calculated EMG Envelope.</p>
+<figure class="align-center" id="id26">
+<img alt="EMG with Envelope" src="../../../_images/emgenvelope.png" />
+<figcaption>
+<p><span class="caption-text">EMG with Envelope</span><a class="headerlink" href="#id26" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="eog-with-blinks">
+<h3>3. <cite>EOG with Blinks</cite><a class="headerlink" href="#eog-with-blinks" title="Link to this heading">#</a></h3>
+<p>The <strong>EOG with Blinks</strong> is a Python-based application designed to visualize and detect eye blinks in real-time using Electrooculography (EOG) signals. Built with the PyQt5 framework and PyQtGraph for plotting, the application connects to an LSL (Lab Streaming Layer) stream to acquire EOG data, processes the signal using a low-pass filter, and detects blinks based on dynamic thresholds. The application provides a dual-plot interface to display the filtered EOG signal and detected blinks, making it a useful tool for real-time monitoring and analysis of EOG data.</p>
+</section>
+<section id="id6">
+<h3>Features<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Real-Time EOG Signal Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Displays the filtered EOG signal in real-time using a low-pass filter (10 Hz cutoff).</p></li>
+<li><p>Dynamically updates the plot with a 5-second rolling window for continuous monitoring.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Dual-Plot Interface</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>EOG Signal Plot: Displays the filtered EOG signal with detected peaks marked in red.</p></li>
+<li><p>Blink Detection Plot: Shows a binary representation of detected blinks (1 for blink, 0 for no blink).</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Blink Detection</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Detects blinks by identifying peaks in the filtered EOG signal.</p></li>
+<li><p>Uses a dynamic threshold based on the mean and standard deviation of the signal to distinguish blinks from noise.</p></li>
+<li><p>Implements a minimum time gap (0.1 seconds) between detected blinks to avoid false positives.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>User-Friendly GUI</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Built with PyQt5 for a responsive and intuitive interface.</p></li>
+<li><p>Includes features like grid lines, auto-scaling, and zoom disablement for better usability.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A GUI window will appear, displaying the real-time EOG signal along with the Blinks marked as Red dot.</p>
+<figure class="align-center" id="id27">
+<img alt="EOG with Blinks" src="../../../_images/eog.png" />
+<figcaption>
+<p><span class="caption-text">EOG with Blinks</span><a class="headerlink" href="#id27" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="eeg-with-fft">
+<h3>4. <cite>EEG with FFT</cite><a class="headerlink" href="#eeg-with-fft" title="Link to this heading">#</a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/yVD9KmyZgxA" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id7">
+<h4>Overview<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<p>The <strong>EEG with FFT and Brainwave Power</strong> is a Python-based application designed to visualize and analyze Electroencephalography (EEG) signals in real-time. It connects to an EEG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to remove noise, and performs Fast Fourier Transform (FFT) to compute the power of different brainwave frequency bands (Delta, Theta, Alpha, Beta, and Gamma). The application provides a graphical user interface (GUI) built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite> for real-time visualization of raw EEG signals, FFT results, and brainwave power distribution.</p>
+</section>
+<section id="id8">
+<h4>Features<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Multi-Channel EEG Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Displays raw EEG signals from all available channels in real-time.</p></li>
+<li><p>Each channel shown in a scrolling plot with 500-sample moving window.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Multi-Channel FFT Analysis</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Computes and displays FFT for all EEG channels simultaneously.</p></li>
+<li><p>Visualizes the FFT results in a separate plot, focusing on the 0-50 Hz range.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Signal Processing</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Applies a notch filter to remove 50 Hz powerline interference.</p></li>
+<li><p>Uses a bandpass filter (0.5-48 Hz) to isolate relevant EEG frequencies.</p></li>
+<li><p>Implements a Hanning window for FFT computation to reduce spectral leakage.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Single-Channel Brainwave Power Analysis</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><dl class="simple">
+<dt>Calculates the power of five brainwave frequency bands:</dt><dd><ul>
+<li><p>Delta (0.5-4 Hz)</p></li>
+<li><p>Theta (4-8 Hz)</p></li>
+<li><p>Alpha (8-13 Hz)</p></li>
+<li><p>Beta (13-30 Hz)</p></li>
+<li><p>Gamma (30-45 Hz)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Displays the power of each band in a bar chart for easy comparison.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>User-Friendly GUI</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><dl class="simple">
+<dt>Provides a clean and intuitive interface with Three-panels:</dt><dd><ul>
+<li><p>Top-left: Multi-channel EEG waveforms</p></li>
+<li><p>Top-right: Multi-channel FFT results</p></li>
+<li><p>Bottom-right: Single-channel brainwave power analysis</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Allows users to monitor multi-channel EEG data and its frequency components simultaneously.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A GUI window will appear, displaying the real-time EEG signal along with the calculated FFT and Brainwave power distribution.</p>
+<figure class="align-center" id="id28">
+<img alt="EEG with FFT" src="../../../_images/ffteeg.png" />
+<figcaption>
+<p><span class="caption-text">EEG with FFT</span><a class="headerlink" href="#id28" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To ensure you’re recording a high-quality signal, refer to the detailed guide here: <a class="reference internal" href="../../../guides/troubleshoot/recording_quality_eeg/index.html#recording-quality-eeg"><span class="std std-ref">Troubleshooting EEG Signal Quality</span></a>.</p>
+</div>
+</section>
+</section>
+<section id="eeg-tug-of-war-game">
+<h3>5. <cite>EEG Tug of War Game</cite><a class="headerlink" href="#eeg-tug-of-war-game" title="Link to this heading">#</a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/XAhcYg1J_7k" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id9">
+<h4>Overview<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<p>The <strong>EEG Tug of War Game</strong> is a Python-based application that leverages Electroencephalography (EEG) signals to create an interactive two-player game. Players control the movement of a ball on the screen by modulating their brain activity, specifically the Alpha and Beta frequency bands. The game uses the Lab Streaming Layer (LSL) protocol to acquire real-time EEG data, processes the signals to calculate relative power in the Alpha and Beta bands, and translates these into forces that move the ball. The first player aims to push the ball onto the opponent’s side to score and win the game. The application is built using the <cite>pygame</cite> library for the graphical interface and integrates with <cite>pylsl</cite> for EEG data acquisition.</p>
+</section>
+<section id="id10">
+<h4>Features<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Real-Time EEG Signal Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Connects to an LSL stream to acquire real-time EEG data.</p></li>
+<li><p>Computes the power spectral density (PSD) of Alpha (8-13 Hz) and Beta (13-30 Hz) frequency bands using Welch’s method.</p></li>
+<li><p>Calculates the relative power ratio (Beta/Alpha) to determine player force.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Interactive Gameplay</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Two players compete to move a ball to the opponent’s side using their brain activity.</p></li>
+<li><p>The ball’s movement is determined by the net force derived from the players’ EEG signals.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Dynamic Thresholding</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Uses a moving average of the last 10 data points to smooth the force calculations.</p></li>
+<li><p>Applies a threshold to prevent small fluctuations from affecting the ball’s movement.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>User-Friendly GUI</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Features a full-screen graphical interface with a central ball and two player paddles.</p></li>
+<li><p>Displays real-time updates of the ball’s position and forces applied by each player.</p></li>
+<li><p>Includes buttons for starting, pausing, resuming, and exiting the game.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>Win Condition and Feedback</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Declares a winner when the ball reaches either side of the screen.</p></li>
+<li><p>Plays a sound effect to celebrate the winner.</p></li>
+<li><p>Automatically pauses the game upon a win and allows for a restart.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The game window will open, featuring buttons for <strong>START/RESTART</strong>, <strong>PLAY/PAUSE</strong>, and <strong>EXIT</strong>. These buttons offer intuitive control, allowing players to easily start, pause, resume, or exit the game as needed.</p>
+<figure class="align-center" id="id29">
+<img alt="EEG Tug of War" src="../../../_images/game.png" />
+<figcaption>
+<p><span class="caption-text">EEG Tug of War</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For detailed instructions, check out the <a class="reference external" href="https://www.instructables.com/Play-Tug-of-War-Game-With-Your-Mind-Using-EEG-1/#ible-footer-portal">EEG Tug of War Game</a> Instructable.</p>
+</section>
+</section>
+<section id="eeg-beetle-game">
+<h3>6. <cite>EEG Beetle Game</cite><a class="headerlink" href="#eeg-beetle-game" title="Link to this heading">#</a></h3>
+<section id="id12">
+<h4>Overview<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<p>The <strong>EEG Beetle Game</strong> is a Python-based application that uses Electroencephalography (EEG) signals to control a beetle’s movement in a 2D game environment. The game leverages the Lab Streaming Layer (LSL) protocol to acquire real-time EEG data, processes the signal to detect the user’s focus level, and translates it into upward or downward movement of the beetle. The application is built using the <cite>pygame</cite> library for the game interface and integrates signal processing techniques to analyze EEG data in real-time.</p>
+</section>
+<section id="id13">
+<h4>Features<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Real-Time EEG Signal Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Connects to an LSL stream to acquire real-time EEG data.</p></li>
+<li><p>Implements a notch filter to remove 50 Hz power line interference and a bandpass filter to isolate relevant EEG frequency bands (0.5–48 Hz).</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Focus Level Calculation</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Computes the user’s focus level by analyzing the power spectral density of the EEG signal.</p></li>
+<li><p>Focus level is calculated using the ratio of high-frequency (beta and gamma) to low-frequency (delta, theta, and alpha) power bands.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Calibration System</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Includes a calibration phase to establish a baseline focus level for the user.</p></li>
+<li><p>Dynamically sets a focus threshold based on the user’s EEG data during calibration.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Beetle Movement Control</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Moves the beetle upward when the user’s focus level exceeds the threshold.</p></li>
+<li><p>Moves the beetle downward when the focus level is below the threshold.</p></li>
+<li><p>Implements smooth animation and boundary constraints to ensure the beetle stays within the game window.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>Interactive Game Interface</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Features a 2D game environment with a beetle sprite that responds to the user’s focus level.</p></li>
+<li><p>Displays real-time feedback on the beetle’s position and focus level.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="6">
+<li><p>Dynamic Animation</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Uses a sequence of beetle sprites to create smooth animations.</p></li>
+<li><p>Adjusts animation speed based on the game’s frame rate.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A GUI window will appear, showing all calibration messages, followed by the game starting, and finally displaying the game with the beetle.</p>
+<figure class="align-center" id="id30">
+<img alt="EEG Beetle Game" src="../../../_images/beetle.png" />
+<figcaption>
+<p><span class="caption-text">EEG Beetle Game</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="gui">
+<h3>7. <cite>GUI</cite><a class="headerlink" href="#gui" title="Link to this heading">#</a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/BseTIdoimws" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id14">
+<h4>Overview<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<p>The <strong>GUI</strong> application is a Python-based tool designed to visualize real-time data streams from an Arduino device using the Lab Streaming Layer (LSL) protocol. The application connects to an LSL stream, retrieves multi-channel data, and plots it in real-time using the <cite>pyqtgraph</cite> library.</p>
+</section>
+<section id="id15">
+<h4>Features<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>LSL Stream Integration</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Automatically searches for and connects to available LSL streams.</p></li>
+<li><p>Supports dynamic detection of the number of channels in the stream.</p></li>
+<li><p>Displays connection status and channel count in the GUI.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Real-Time Data Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Plots real-time data for each channel in separate graphs.</p></li>
+<li><p>Updates plots at a high frequency for smooth visualization.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Customizable GUI</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Built using <cite>PyQt</cite> and <cite>pyqtgraph</cite> for a responsive and interactive interface.</p></li>
+<li><p>Features a clean layout with individual plots for each channel.</p></li>
+<li><p>Includes a status bar to display LSL connection details.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A GUI window will appear that shows the data in real-time.</p>
+<figure class="align-center" id="id31">
+<img alt="GUI" src="../../../_images/gui.jpg" />
+<figcaption>
+<p><span class="caption-text">GUI</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="eog-keystroke-emulator">
+<h3>8. <cite>EOG Keystroke Emulator</cite><a class="headerlink" href="#eog-keystroke-emulator" title="Link to this heading">#</a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/ZJmUUtHJj08" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id16">
+<h4>Overview<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
+<p>The <strong>EOG Keystroke Emulator</strong> is a Python-based application designed to detect eye blinks using Electrooculography (EOG) signals and translate them into keystrokes. The application leverages the Lab Streaming Layer (LSL) protocol to acquire real-time EOG data, processes the signal to detect blinks, and simulates a spacebar press whenever a blink is detected. The application is built using the <cite>tkinter</cite> library for the graphical user interface (GUI) and integrates with <cite>pyautogui</cite> for keystroke emulation.</p>
+</section>
+<section id="id17">
+<h4>Features<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Real-Time EOG Signal Processing</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Connects to an LSL stream to acquire real-time EOG data.</p></li>
+<li><p>Implements a low-pass filter to smooth the EOG signal for accurate blink detection.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Blink Detection</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Detects blinks by identifying peaks in the filtered EOG signal.</p></li>
+<li><p>Uses a dynamic threshold based on the mean and standard deviation of the signal to distinguish blinks from noise.</p></li>
+<li><p>Incorporates a refractory period to prevent multiple detections from a single blink.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Keystroke Emulation</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Simulates a spacebar press (<cite>pyautogui.press(‘space’)</cite>) whenever a blink is detected.</p></li>
+<li><p>Provides visual feedback by updating the GUI button color upon blink detection.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>User-Friendly GUI</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Features a compact, movable popup window with a clean and intuitive interface.</p></li>
+<li><p>Includes buttons for connecting to the LSL stream, starting/stopping blink detection, and quitting the application.</p></li>
+<li><p>Displays an eye icon to represent the blink detection status.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A small window appears in the corner, displaying a <em>Connect</em> button. Once connected, a <em>Start</em> button becomes visible. Pressing the <em>Start</em> button initiates blink detection, and each detected blink triggers a spacebar key press.</p>
+<figure class="align-center" id="id32">
+<img alt="Keystroke Emulator" src="../../../_images/keystroke.png" />
+<figcaption>
+<p><span class="caption-text">Keystroke Emulator</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="csv-plotter">
+<h3>9. <cite>CSV Plotter</cite><a class="headerlink" href="#csv-plotter" title="Link to this heading">#</a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/wMnCOprRpZo" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id18">
+<h4>Overview<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
+<p>The <strong>CSV Plotter</strong> is a Python-based application designed to visualize data from CSV files. Built using the <cite>tkinter</cite> library for the graphical user interface (GUI) and <cite>plotly</cite> for data visualization, this tool allows users to load CSV files, select specific data channels, and generate interactive line plots.</p>
+</section>
+<section id="id19">
+<h4>Features<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Load CSV Files</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Users can load CSV files containing data with a <cite>Counter</cite> column and multiple channels (e.g., <cite>Channel1</cite>, <cite>Channel2</cite>, etc.).</p></li>
+<li><p>The application automatically detects the header row and skips any metadata above it.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Channel Selection</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>A dropdown menu dynamically populates with available channels (e.g., <cite>Channel1</cite>, <cite>Channel2</cite>, etc.) from the loaded CSV file.</p></li>
+<li><p>Users can select a specific channel to plot.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Interactive Data Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Utilizes <cite>plotly</cite> to generate interactive line plots for the selected channel.</p></li>
+<li><dl class="simple">
+<dt>Plots include advanced features such as:</dt><dd><ul>
+<li><p><em>Zoom</em>: Zoom in to inspect specific data ranges.</p></li>
+<li><p><em>Pan</em>: Move across the plot to explore different sections.</p></li>
+<li><p><em>Autoscale</em>: Automatically adjust the plot scale to fit the data.</p></li>
+<li><p><em>Download Plot as PNG</em>: Save the generated plot as a high-quality PNG image.</p></li>
+<li><p><em>Hover-to-View Data Points</em>: Hover over the plot to view precise data values.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>User-Friendly Interface</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Simple and intuitive GUI with buttons for loading files and plotting data.</p></li>
+<li><p>Displays the name of the loaded CSV file for easy reference.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A small pop-up will appear, providing options to load the file, select the channel, and plot the data.</p>
+<figure class="align-center" id="id33">
+<img alt="CSV Plotter" src="../../../_images/csvplotter.png" />
+<figcaption>
+<p><span class="caption-text">CSV Plotter</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="eog-morse-decoder">
+<h3>10. <cite>EOG Morse Decoder</cite><a class="headerlink" href="#eog-morse-decoder" title="Link to this heading">#</a></h3>
+<section id="id20">
+<h4>Overview<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
+<p>The <strong>EOG Morse Decoder</strong> is a Python-based application that enables users to input Morse code using eye movements detected via Electrooculography (EOG) signals. By moving your eyes left or right, you can generate dots and dashes, and by performing double or triple blinks, you can send characters or backspace. This application is ideal for hands-free communication and accessibility research.</p>
+<figure class="align-center" id="id34">
+<img alt="Morse Decoder" src="../../../_images/morse_decoder.png" />
+<figcaption>
+<p><span class="caption-text">Morse Decoder</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id21">
+<h3>Features<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Features</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Real-Time EOG Signal Processing</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Connects to an LSL stream to acquire real-time EOG data.</p></li>
+<li><p>Applies notch and bandpass filters to remove noise and isolate eye movement signals.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Eye Movement Detection</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Detects left and right eye movements by analyzing deviations from a dynamically calculated baseline.</p></li>
+<li><p>Uses adjustable thresholds with interactive GUI sliders for real-time sensitivity adjustment.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Morse Code Input</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Left eye movement generates a dot (.)</p></li>
+<li><p>Right eye movement generates a dash (-)</p></li>
+<li><p>Double blink sends the current Morse sequence as a letter.</p></li>
+<li><p>Triple blink acts as backspace to delete the last character.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Interactive GUI with Real-Time Visualization</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Displays the decoded message in a large, clear font using a Tkinter GUI.</p></li>
+<li><p>Real-time bar graphs showing blink envelope and eye movement deviation.</p></li>
+<li><p>Click-and-drag threshold adjustment on visual indicators.</p></li>
+<li><p>Shows current buffer contents and detection status.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>Adjustable Parameters</p></li>
+</ol>
+</td>
+<td><ul class="simple">
+<li><p>Interactive threshold adjustment via clickable/draggable markers on visualization bars.</p></li>
+<li><p>Separate thresholds for blink detection and eye movement detection.</p></li>
+<li><p>Configurable debounce times for preventing false detections.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A GUI window will appear that allows you to input Morse code using eye movements and displays the decoded text in real-time.</p>
+<section id="electrode-placement">
+<h4>Electrode Placement<a class="headerlink" href="#electrode-placement" title="Link to this heading">#</a></h4>
+<p>Proper electrode placement is crucial for accurate EOG signal detection. The table below shows the recommended electrode configuration:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Electrode Pin</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Placement</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A0P</p></td>
+<td><p>Channel 1 Positive</p></td>
+<td><p>Below eye</p></td>
+</tr>
+<tr class="row-odd"><td><p>A0N</p></td>
+<td><p>Channel 1 Negative</p></td>
+<td><p>Above eye</p></td>
+</tr>
+<tr class="row-even"><td><p>A1P</p></td>
+<td><p>Channel 2 Positive</p></td>
+<td><p>On the left of left eye</p></td>
+</tr>
+<tr class="row-odd"><td><p>A1N</p></td>
+<td><p>Channel 2 Negative</p></td>
+<td><p>On the right of right eye</p></td>
+</tr>
+<tr class="row-even"><td><p>REF</p></td>
+<td><p>Reference</p></td>
+<td><p>Bony part behind the ear</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Channel 1 (A0P/A0N) detects vertical eye movements for blink detection</p></li>
+<li><p>Channel 2 (A1P/A1N) detects horizontal eye movements for left/right detection</p></li>
+<li><p>Proper skin preparation and electrode contact quality are essential for optimal performance</p></li>
+</ul>
+</div>
+<figure class="align-center" id="id35">
+<img alt="Electrode Placement Diagram" src="../../../_images/morse-Code_electrode_placement.jpg" />
+<figcaption>
+<p><span class="caption-text">Electrode Placement Diagram</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="how-it-works">
+<h4>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Signal Acquisition</strong>: The application connects to an LSL stream and continuously reads vertical and horizontal EOG data from two channels.</p></li>
+<li><p><strong>Filtering</strong>: Notch filters (50Hz), high-pass filters (1Hz), and low-pass filters (10Hz) are applied to remove powerline interference and isolate relevant frequencies.</p></li>
+<li><p><strong>Baseline Tracking</strong>: A rolling baseline is maintained for horizontal EOG to adapt to individual signal characteristics.</p></li>
+<li><p><strong>Envelope Detection</strong>: Vertical EOG signal envelope is computed for reliable blink detection.</p></li>
+<li><p><strong>Movement Detection</strong>: Horizontal EOG deviations from baseline are analyzed to classify left and right eye movements.</p></li>
+<li><p><strong>Morse Code Input</strong>:</p>
+<ul>
+<li><p>Left eye movement → Dot (.)</p></li>
+<li><p>Right eye movement → Dash (-)</p></li>
+<li><p>Double blink → Sends the current Morse sequence as a letter</p></li>
+<li><p>Triple blink → Backspace (deletes last character)</p></li>
+</ul>
+</li>
+<li><p><strong>GUI Display</strong>: Real-time visualization shows detection thresholds, signal levels, buffer contents, and decoded message.</p></li>
+</ul>
+</section>
+<section id="adjusting-detection-for-your-neural-signals">
+<h4>Adjusting Detection for Your Neural Signals<a class="headerlink" href="#adjusting-detection-for-your-neural-signals" title="Link to this heading">#</a></h4>
+<p>The application provides an intuitive GUI for adjusting detection sensitivity in real-time:</p>
+<p><strong>Interactive Threshold Adjustment:</strong></p>
+<ul class="simple">
+<li><p><strong>Blink Detection Threshold</strong>: Click or drag the orange marker on the blink detection bar to adjust the threshold (range: 40-260). Higher values require stronger blinks.</p></li>
+<li><p><strong>Eye Movement Threshold</strong>: Click or drag the orange marker on the eye movement bar to adjust the threshold (range: 40-260). Higher values require larger eye movements.</p></li>
+</ul>
+<p><strong>Visual Feedback:</strong></p>
+<ul class="simple">
+<li><p>The blink detection bar shows the current envelope value (green when below threshold, red when above)</p></li>
+<li><p>The eye movement bar shows deviation from baseline (blue when below threshold, purple for left movement, red for right movement)</p></li>
+<li><p>Threshold markers display the current threshold value and can be dragged for adjustment</p></li>
+</ul>
+<p><strong>Timing Parameters</strong> (adjustable in code if needed):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BLINK_DEBOUNCE_MS</span></code> (default: 200ms): Minimum time between detecting separate blinks</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DOUBLE_BLINK_MS</span></code> (default: 1000ms): Time window for double blink detection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TRIPLE_BLINK_MS</span></code> (default: 1500ms): Time window for triple blink detection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EYE_MOVEMENT_DEBOUNCE_MS</span></code> (default: 750ms): Minimum time between detecting separate eye movements</p></li>
+</ul>
+<p><strong>Tips for Optimal Performance:</strong></p>
+<ul class="simple">
+<li><p>Make sure NPG Lite is charged and not connected to a charging laptop or an AC powered device</p></li>
+<li><p>Sit away from AC powered appliances</p></li>
+<li><p>Ensure proper skin preparation and electrode contact quality. Read the <a class="reference internal" href="../../../guides/usage-guides/skin-preparation/index.html#skin-preparation"><span class="std std-ref">Skin Preparation Guide</span></a> for detailed instructions.</p></li>
+<li><p>Start with default threshold values and adjust using the GUI sliders based on your signal strength</p></li>
+<li><p>Ensure proper electrode placement for clean vertical and horizontal EOG signals</p></li>
+<li><p>Maintain a neutral gaze position during baseline calculation at startup</p></li>
+<li><p>Use the real-time visualization bars to monitor signal quality and adjust thresholds accordingly</p></li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h4>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>If movements are not detected reliably, use the GUI to adjust thresholds in real-time by clicking/dragging the orange markers</p></li>
+<li><p>Ensure electrodes are placed correctly: vertical EOG above/below one eye, horizontal EOG at outer corners of both eyes</p></li>
+<li><p>Remain relaxed and maintain a neutral gaze position during the initial baseline calculation</p></li>
+<li><p>Check the real-time visualization bars to ensure signals are being detected properly</p></li>
+<li><p>If blinks or movements are too sensitive, increase the respective threshold using the GUI sliders</p></li>
+<li><p>If blinks or movements are not sensitive enough, decrease the threshold using the GUI sliders</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="create-custom-application">
+<h2>Create Custom application<a class="headerlink" href="#create-custom-application" title="Link to this heading">#</a></h2>
+<p>You can create custom applications using the provided framework by following these steps:</p>
+<ol class="arabic simple">
+<li><p>Configure Application Metadata:</p></li>
+</ol>
+<p>Edit the <code class="docutils literal notranslate"><span class="pre">apps.yaml</span></code> file in the <code class="docutils literal notranslate"><span class="pre">config</span></code> folder with your application details:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Your</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">Title"</span>
+<span class="w">  </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s">"path/to/your/icon.png"</span>
+<span class="w">  </span><span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="s">"your_hex_color"</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="s">"path/to/{app_name}.py"</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Brief</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">application"</span>
+<span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">"Your</span><span class="nv"> </span><span class="s">Category"</span>
+</pre></div>
+</div>
+<p>Add this as a new entry in the YAML list. Replace all placeholders with your actual application details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">icon</span></code> path should be relative to the application root directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">color</span></code> should be in HEX format (e.g., “#FF5733”)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">script</span></code> path should point to your Python file</p></li>
+</ul>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create application script:</p></li>
+</ol>
+<p>Create a new Python script in the main directory with your application name. The script should contain:</p>
+<ul class="simple">
+<li><p>LSL stream connection handling to receive device data</p></li>
+<li><p>User interface components using PyQt5/PyQtGraph</p></li>
+<li><p>Data processing logic for incoming signals</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the existing applications in the repository as reference implementations for:
+- lsl setup and data acquisition
+- Advanced UI layouts
+- Signal processing examples
+- Performance optimization</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../chords-web/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chords-Web</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chords-lsl-connector/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chords-LSL-Connector</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-code">Uploading the code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-chords-python">Opening Chords-Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-using-the-chordspy-package">A. Using the chordspy Package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-running-scripts-manually-alternative">B. Running Scripts Manually (Alternative)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection">Connection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi">Wi-Fi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bluetooth">Bluetooth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-usb">Serial (USB)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-logging">CSV Logging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg-with-heart-rate">1. <cite>ECG with Heart Rate</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emg-with-envelope">2. <cite>EMG with Envelope</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-with-blinks">3. <cite>EOG with Blinks</cite></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-with-fft">4. <cite>EEG with FFT</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-tug-of-war-game">5. <cite>EEG Tug of War Game</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-beetle-game">6. <cite>EEG Beetle Game</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">7. <cite>GUI</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-keystroke-emulator">8. <cite>EOG Keystroke Emulator</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-plotter">9. <cite>CSV Plotter</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Features</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-morse-decoder">10. <cite>EOG Morse Decoder</cite></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Overview</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electrode-placement">Electrode Placement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works">How It Works</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-detection-for-your-neural-signals">Adjusting Detection for Your Neural Signals</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-custom-application">Create Custom application</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainsoftware/chords/chords-python/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/software/chords/chords-python/index.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Upside Down Labs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Sep 18, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

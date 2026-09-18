@@ -1,0 +1,139 @@
+.. _neuroscience-basics-for-biopotential-signals-module-3:
+
+.. figure:: ../media/module-3-banner.*
+   :align: center
+   :alt: Module 3 Banner 
+
+Module 3: Passive Membrane Properties [1]_
+####################################################
+
+Studying passive membrane properties before understanding action potentials is important as they influence how signals 
+propagate and decay along neurons, determining how far signals can travel before requiring regeneration. 
+
+3.1 Resistance and Capacitance in membrane  
+***********************************************
+
+There are two significant electrical properties of neurons that significantly influence how neurons generate and 
+transmit signals. Let us understand each of them one by one.
+
+3.1.1 Resistance
+=================
+
+Resistance is a measure of how much a material opposes the flow of electric current. In the context of neurons, 
+it refers to how difficult it is for ions to flow across the membrane.
+
+.. figure:: ../media/resistance-formula.*
+   :align: center
+   :alt: Resistance formula
+
+Types of Resistance in Neurons:
+--------------------------------
+
+1. Membrane Resistance (Rm)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Membrane resistance refers to resistance to the flow of ions across the neuronal membrane. It determines how easily ions can cross the membrane when ion channels open.
+
+Factors affecting membrane resistance
+""""""""""""""""""""""""""""""""""""""""""
+
+- **Ion Channels:** The presence and density of ion channels directly affect membrane resistance. More channels result in lower resistance because they provide additional pathways for ions to flow.
+- **Membrane Composition:** The lipid bilayer structure and the types of proteins embedded in the membrane influence its overall resistance. A thicker membrane will have higher resistance.
+- **Membrane surface area:** A larger membrane surface area decreases membrane resistance because it provides more ion channels and pathways for current flow. 
+- **Myelination:** Myelin increases membrane resistance by preventing ion leakage across the membrane.
+- **Temperature:** Higher temperatures can increase ion mobility, which may decrease membrane resistance.
+
+.. note:: A high membrane resistance helps maintain the membrane's resting potential by minimizing the flow of ions across it. 
+
+2. Axial Resistance (Ri)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Axial resistance refers to resistance to the flow of electrical current along the length of the neuron's axon or dendrites. It is influenced by the internal properties of the cytoplasm and the dimensions of the neuron’s axon or dendrites.
+
+Factors affecting axial resistance
+""""""""""""""""""""""""""""""""""""""""""""""
+
+- **Cytoplasmic Conductivity:** The concentration of ions and other conductive materials in the cytoplasm affects axial resistance. A higher concentration of conductive ions leads to low axial resistance.
+- **Diameter of the Neuron:** Larger diameter axons have lower axial resistance because a greater cross-sectional area allows for easier ion flow. This is why larger axons can conduct signals more rapidly.
+- **Length of the neuronal process:** Longer axons or dendrites have higher axial resistance because the current has to travel a greater distance, leading to more potential for signal decay.
+
+.. note:: Axial resistance affects how far a signal can travel along an axon without significant potential loss. Lower axial resistance allows signals to travel farther and faster.
+
+.. admonition:: Conductance
+
+   It is the ease with which electric current can flow through a membrane. In the context of neurons, it refers to the ease with which ions can move across the neuronal membrane, meaning a higher conductance indicates a lower resistance, allowing for easier passage of electrical signals through the neuron. 
+
+   .. figure:: ../media/conductance-formula.*
+      :align: center
+      :alt: Conductance formula
+
+3.1.2 Capacitance
+=====================
+
+Capacitance is the ability of a system to store electric charge.
+
+In neurons, the Membrane capacitance (Cm) can be described as the capacity of a neuronal membrane to store charge, which is crucial for 
+creating and maintaining the membrane potential.
+
+.. figure:: ../media/capacitance-formula.*
+   :align: center
+   :alt: Capacitance formula
+
+Factors Affecting Membrane Capacitance:
+------------------------------------------------
+
+- **Surface Area:** A larger surface area increases capacitance, allowing the membrane to store more charge.
+- **Thickness of the Membrane:** Thinner membranes generally have higher capacitance because the distance between charges is less.
+- **Dielectric Properties of the Membrane:** The lipid bilayer of the neuronal membrane acts as a dielectric (insulating layer) between two conductive solutions (inside and outside of the cell). The properties of this dielectric layer influence the capacitance. A higher dielectric constant increases capacitance by allowing the membrane to store more charge.
+- **Myelination:** Myelin sheaths increase the effective thickness of the membrane, which can decrease capacitance and allow for faster signal transmission.
+
+Role in Membrane Potential
+---------------------------
+
+Capacitance affects how quickly a neuron can respond to changes in voltage. When a current is applied, the membrane capacitance 
+determines how quickly the membrane potential changes. A high capacitance means the membrane can hold more charge, resulting in a 
+slower rate of potential change, while a low capacitance allows for rapid changes.
+
+3.2 Length and Time constant
+*****************************
+
+The interplay between resistance and capacitance significantly impacts how neurons process and transmit signals. 
+
+Time Constant (τ)
+=========================
+
+The time constant is defined as the product of resistance and capacitance. It indicates 
+how quickly the membrane potential can change in response to a stimulus. A longer time constant means the neuron 
+takes longer to respond, while a shorter time constant allows for rapid changes.
+
+.. figure:: ../media/time-constant.*
+   :align: center
+   :alt: Time Constant
+
+Length Constant (λ)
+============================
+
+This measures how far an electrical signal can travel along the axon before it decays significantly. It is influenced by both axial resistance and membrane resistance. A higher length constant allows the signal to travel farther.
+
+.. figure:: ../media/length-constant.*
+   :align: center
+   :alt: Length Constant 
+
+3.3 Summary
+**************
+
+In this module, we learned how the passive electrical properties of neurons influence the spread of signals along the membrane. We studied two key features:
+Membrane resistance (Rm) and axial resistance (Ri), which determine how easily ions flow across the membrane and along the neuron.
+Membrane capacitance (Cm), which describes how much charge the membrane can store and how quickly its voltage can change.
+We also learned two important parameters: 
+
+- Time constant(τ) - determines how fast the membrane potential responds to a stimulus.
+
+- Length constant(λ) - determines how far a signal can travel before it decays.
+
+Together, these passive properties explain why some signals weaken over distance and why neurons require active mechanisms to regenerate signals. This sets the stage for the next module on Action Potentials (Module 4), where we study how neurons generate full electrical spikes to overcome passive decay.
+
+3.4 References
+*****************
+
+.. [1] `A guide to Passive Membrane Properties <https://www.scientifica.uk.com/learning-zone/passive-membrane-properties>`_
