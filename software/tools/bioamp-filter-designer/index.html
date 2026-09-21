@@ -639,7 +639,7 @@
 <span id="id1"></span><h1>BioAmp Filter Designer<a class="headerlink" href="#bioamp-filter-designer" title="Link to this heading">#</a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>BioAmp Filter Designer is a Python-based desktop tool that generates ready-to-use digital filters for biomedical signal processing applications such as ECG, EMG, EOG and EEG, for example when working with <a class="reference internal" href="../../../hardware/index.html#upsidedownlabs-hardware-home"><span class="std std-ref">BioAmp Hardware</span></a>. Pick a filter type, sampling rate, order and cutoff frequencies, choose a programming language, and the tool writes a complete Butterworth IIR filter class for you, along with an optional frequency response plot.</p>
+<p>BioAmp Filter Designer is a Python-based desktop tool that generates ready-to-use digital filters for bio-potential signal processing applications such as ECG, EMG, EOG and EEG, for example when working with <a class="reference internal" href="../../../hardware/index.html#upsidedownlabs-hardware-home"><span class="std std-ref">BioAmp Hardware</span></a>. Pick a filter type, sampling rate, order and cutoff frequencies, choose a programming language, and the tool writes a complete Butterworth IIR filter class for you, along with an optional frequency response plot.</p>
 <p>The generated filter is implemented as cascaded second-order sections (biquads) and comes as a class with <code class="docutils literal notranslate"><span class="pre">process()</span></code> and <code class="docutils literal notranslate"><span class="pre">reset()</span></code> methods, so you can create one object per channel for multi-channel signals.</p>
 <figure class="align-center" id="id3">
 <img alt="Digital Filter Designer window with the Filter Configuration and Output Configuration panels on the left and an empty Generated Filter Code panel on the right" src="../../../_images/overview1.png" />
@@ -852,6 +852,10 @@
 </figure>
 </section>
 </section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
+<p>The filters are Butterworth IIR filters designed with SciPy: <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html">scipy.signal.butter</a>.</p>
+</section>
 </section>
 
 
@@ -917,6 +921,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-filter">Generate the Filter</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
 </ul>
   </nav></div>
 
